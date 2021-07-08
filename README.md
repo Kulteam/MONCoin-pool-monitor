@@ -2,19 +2,7 @@
 
 <h1 align="center"></h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-0.0.1-blue.svg?cacheSeconds=2592000" />
-  <a href="https://github.com/turtlecoin/turtlecoin-pool-monitor#readme">
-    <img alt="Documentation" src="https://img.shields.io/badge/documentation-meh-brightgreen.svg" target="_blank" />
-  </a>
-  <a href="https://github.com/turtlecoin/turtlecoin-pool-monitor/graphs/commit-activity">
-    <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" target="_blank" />
-  </a>
-  <a href="https://github.com/turtlecoin/turtlecoin-pool-monitor/blob/master/LICENSE">
-    <img alt="License: AGPL-3.0" src="https://img.shields.io/badge/License-AGPL-yellow.svg" target="_blank" />
-  </a>
-  <a href="https://twitter.com/ ">
-    <img alt="Twitter:  " src="https://img.shields.io/twitter/follow/_turtlecoin.svg?style=social" target="_blank" />
-  </a>
+ 
 </p>
 
 ## Prerequisites
@@ -30,13 +18,12 @@
 ### Collection Service
 
 ```sh
-npm install -g turtlecoin-pool-monitor
 export MYSQL_HOST=<server ip>
 export MYSQL_PORT=<server port>
 export MYSQL_USERNAME=<server username>
 export MYSQL_PASSWORD=<server password>
 export MYSQL_DATABASE=<database>
-turtlecoin-pool-monitor
+node collector.js
 ```
 
 #### Additional Options
@@ -47,32 +34,7 @@ export MYSQL_CONNECTION_LIMIT=<# of maximum server connections (default: 10)>
 export HISTORY_DAYS=<# of days to keep history (default: 6 hours)>
 export UPDATE_INTERVAL=<# of seconds between updating pool list (default: 1 hour)>
 export POLLING_INTERVAL=<# of seconds between checking pools (default: 15s)>
-export POOL_LIST_URL=<Full URL to pool list (default: turtlecoin-pools-json)>
-```
-
-### As a Module for Pulling Stats
-
-```sh
-npm install --save turtlecoin-pool-monitor
-```
-
-#### Sample Code
-
-```javascript
-const StatsDatabase = require('turtlecoin-pool-monitor')
-
-const db = new StatsDatabase({
-  host: 'localhost',
-  port: 3306,
-  username: 'root',
-  password: 'password',
-  database: 'turtlecoin',
-  connectionLimit: 10
-})
-
-db.getPoolStats().then((stats) => {
-  console.log(stats)
-})
+export POOL_LIST_URL=<Full URL to pool list (default: moncoin-pools-json)>
 ```
 
 ## Database Schema

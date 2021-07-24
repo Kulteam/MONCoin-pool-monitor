@@ -74,9 +74,8 @@ CREATE TABLE `pool_polling` (
 **The TurtleCoin Developers**
 
 * Twitter: [@turtlecoin](https://twitter.com/_turtlecoin )
-* Github: [@turtlecoin](https://github.com/turtlecoin)
 
 ## License
 
-Copyright © 2019 [The TurtleCoin Developers](https://github.com/turtlecoin).<br />
-This project is [AGPL-3.0](https://github.com/turtlecoin/cryptodira/blob/master/LICENSE) licensed.
+Copyright © 2019 The TurtleCoin Developers
+This project is [AGPL-3.0](https://github.com/Kulteam/MONCoin-pool-monitor/blob/master/LICENSE) licensed.
